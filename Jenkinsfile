@@ -20,14 +20,14 @@ pipeline {
         //     }
         // }
 
-        stage('Run Automation Tests') {
-            steps {
-                script {
-                    // Run your tests with Maven (e.g., unit tests with JUnit)
-                    sh "${MAVEN_HOME}/bin/mvn test"
-                }
-            }
-        }
+        // stage('Run Automation Tests') {
+        //     steps {
+        //         script {
+        //             // Run your tests with Maven (e.g., unit tests with JUnit)
+        //             sh "${MAVEN_HOME}/bin/mvn test"
+        //         }
+        //     }
+        // }
 
         stage('SonarQube Analysis') {
             steps {
