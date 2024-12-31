@@ -13,23 +13,33 @@
         <sonar.login>${env.SONAR_TOKEN}</sonar.login>
     </properties>
   <dependencies>
-    <!-- JUnit 5 Dependency -->
+    <!-- JUnit 5 dependencies -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>5.9.3</version>
+        <version>5.7.0</version>
         <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.9.3</version>
+        <version>5.7.0</version>
         <scope>test</scope>
     </dependency>
+
+    <!-- Selenium WebDriver dependencies -->
     <dependency>
-        <groupId>org.junit.platform</groupId>
-        <artifactId>junit-platform-launcher</artifactId>
-        <version>1.9.3</version>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.141.59</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- ChromeDriver dependency -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-chrome-driver</artifactId>
+        <version>3.141.59</version>
         <scope>test</scope>
     </dependency>
 </dependencies>
