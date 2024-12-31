@@ -31,17 +31,15 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                steps {
                 withSonarQubeEnv('sonarqube') {
                     bat """
+                    mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=Ass-2-maven-project \
                     -Dsonar.projectName='Ass-2-maven-project' \
-                    -Dsonar.host.url=http://localhost:9000 \
                     -Dsonar.host.url=http://localhost:9000 \
                     -Dsonar.token=$SONAR_TOKEN
                     """
                 }
-            }
             }
         }
     }
